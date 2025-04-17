@@ -158,7 +158,7 @@ private Object createDog(String name, String breed, int weight) {
 
 @Test
     @DisplayName("")
-    void dogsetBreedTest() {
+    void dogSetBreedTest() {
         try {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getBreed");
@@ -177,7 +177,7 @@ private Object createDog(String name, String breed, int weight) {
 
 @Test
     @DisplayName("")
-    void dogsetBreedTest() {
+    void dogSetWeightTest() {
         try {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getWeight");
@@ -318,7 +318,7 @@ private Object createDog(String name, String breed, int weight) {
     void carGetPriceTest2() {
         try {
             Class<?> carClass = Class.forName("Car");
-            Method method = craClass.getDeclaredMethod("getPrice");
+            Method method = carClass.getDeclaredMethod("getPrice");
             Object car = createCar("Audi", "A4", 2020, 49999.99);
             assertEquals(49999.99, (double)method.invoke(car), 0.01);
         } catch (ClassNotFoundException e) {
