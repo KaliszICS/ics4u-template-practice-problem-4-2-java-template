@@ -92,7 +92,7 @@ private Object createDog(String name, String breed, int weight) {
         try {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getName");
-            Object dog = createDog("Fido", "Poddle", 15);
+            Object dog = createDog("Fido", "Poodle", 15);
             assertEquals("Fido", (String)method.invoke(dog));
         } catch (ClassNotFoundException e) {
             fail("class does not exist");
@@ -109,7 +109,7 @@ private Object createDog(String name, String breed, int weight) {
         try {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getBreed");
-            Object dog = createDog("Fido", "Poddle", 15);
+            Object dog = createDog("Fido", "Poodle", 15);
             assertEquals("Poodle", (String)method.invoke(dog));
         } catch (ClassNotFoundException e) {
             fail("class does not exist");
@@ -126,7 +126,7 @@ private Object createDog(String name, String breed, int weight) {
         try {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getWeight");
-            Object dog = createDog("Fido", "Poddle", 15);
+            Object dog = createDog("Fido", "Poodle", 15);
             assertEquals(15, (int)method.invoke(dog), 0.01);
         } catch (ClassNotFoundException e) {
             fail("class does not exist");
@@ -144,7 +144,7 @@ private Object createDog(String name, String breed, int weight) {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getName");
         Method setMethod = dogClass.getDeclaredMethod("setName");
-            Object dog = createDog("Fido", "Poddle", 15);
+            Object dog = createDog("Fido", "Poodle", 15);
         setMethod.invoke(dog, "Monty");
             assertEquals("Monty", (String)method.invoke(dog));
         } catch (ClassNotFoundException e) {
@@ -163,7 +163,7 @@ private Object createDog(String name, String breed, int weight) {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getBreed");
         Method setMethod = dogClass.getDeclaredMethod("setBreed");
-            Object dog = createDog("Fido", "Poddle", 15);
+            Object dog = createDog("Fido", "Poodle", 15);
         setMethod.invoke(dog, "Labrador");
             assertEquals("Labrador", (String)method.invoke(dog));
         } catch (ClassNotFoundException e) {
@@ -182,7 +182,7 @@ private Object createDog(String name, String breed, int weight) {
             Class<?> dogClass = Class.forName("Dog");
             Method method = dogClass.getDeclaredMethod("getWeight");
         Method setMethod = dogClass.getDeclaredMethod("setWeight");
-            Object dog = createDog("Fido", "Poddle", 15);
+            Object dog = createDog("Fido", "Poodle", 15);
         setMethod.invoke(dog, 55);
             assertEquals(55, (int)method.invoke(dog));
         } catch (ClassNotFoundException e) {
